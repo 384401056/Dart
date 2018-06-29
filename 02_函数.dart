@@ -1,18 +1,20 @@
 void main() {
-//  //函数的调用
+  //函数的调用
   print(sayHello("Gaoyanbin"));
-//
-//  //无返回值的函数
+
+  //无返回值的函数
   sayHello2("Hello boy...");
-//
+
+  //函数简写
+  sayHello3(name) => "Hello $name";
   print(sayHello3("Ho Ho Ho"));
-//
-//  //匿名函数的写法
+
+  //匿名函数的写法
   var func = (name)=>"Hello $name";
   print(func("Wo Wo Wo"));
 
-  var x = makeSubstract(5); //5是n
-  print(x(2)); //2是i
+  var x = makeSubstract(5); //返回函数的函数。
+  print(x(2));
 
   var callback = [];
 
@@ -49,8 +51,8 @@ Function makeSubstract(num n) {
 }
 
 
-String sayHello(String str) {
-  return "Hello $str";
+String sayHello(String name) {
+  return "Hello $name";
 }
 
 //以上方法可以简写为此
