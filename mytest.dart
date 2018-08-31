@@ -1,7 +1,6 @@
 //dart:前缀表示Dart的标准库，如dart:io、dart:html
 import 'dart:math';
 
-import 'package:student/student.dart';
 
 //当然，你也可以用相对路径或绝对路径的dart文件来引用
 // import 'lib/student/student.dart';
@@ -15,5 +14,22 @@ import 'package:student/student.dart';
 // import 'lib/student/student.dart' hide Person;
 
 void main(){
-  print("");
+  Map<String, dynamic> myMap = {
+    "lll":['a','b','c'],
+  };
+
+  String inputNum = "000050.34";
+  num x = num.parse(inputNum);
+  print("$x");
+}
+
+void func(MyClas a){
+  a.name = "bbb";
+  a.isMan = false;
+}
+
+class MyClas {
+  MyClas(this.name,{bool this.isMan: false}){}
+  String name;
+  bool isMan;
 }
